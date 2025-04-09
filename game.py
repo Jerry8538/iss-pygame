@@ -42,7 +42,8 @@ clock = pygame.time.Clock()
 p_rects = []
 i_rects = []
 
-score = 0
+p_score = 0
+i_score = 0
 
 while running:
 
@@ -94,13 +95,13 @@ while running:
     for rect in p_rects:
         if p_rect.colliderect(rect):
             p_rects.remove(rect)
-            score += 1
+            p_score += 1
         rect.x -= 5
     
     for rect in i_rects:
         if i_rect.colliderect(rect):
             i_rects.remove(rect)
-            score += 1
+            i_score += 1
 
         rect.x -= 5
 
@@ -139,6 +140,7 @@ while running:
 
     pygame.display.flip()
 
-print(f"Your score: {score}")
+print(f"Phineas' score: {p_score}")
+print(f"Isabella's score: {i_score}")
 
 pygame.quit()
