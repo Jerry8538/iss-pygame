@@ -54,9 +54,9 @@ while running:
 
     keys = pygame.key.get_pressed()
 
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_SPACE]:
         p_vy = -400
-    if keys[pygame.K_COMMA]:
+    if keys[pygame.K_w]:
         i_vy = -400
 
     if keys[pygame.K_RIGHT]:
@@ -67,13 +67,13 @@ while running:
         phineas_image = p_l
     if keys[pygame.K_DOWN]:
         p_y += 100
-    if keys[pygame.K_e]:
+    if keys[pygame.K_d]:
         i_x += i_vx
         isabella_image = i_l
     if keys[pygame.K_a]:
         i_x -= i_vx
         isabella_image = i_r
-    if keys[pygame.K_o]:
+    if keys[pygame.K_s]:
         i_y += 100
 
     screen.fill((0, 0, 0))
